@@ -1,0 +1,22 @@
+
+#search {
+  display: flex;
+  justify-content: center;
+}
+
+#search > #search-box {
+  border: 1px solid black;
+  padding: 4px 6px;
+}
+
+#search > #search-box > input {
+  padding: 0 6px;
+  width: 250px;
+  height: 30px;
+}
+
+#search > #search-box > button {
+  margin-left: 6px;
+  height: 30px;
+  width: 100px;
+}

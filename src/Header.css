@@ -1,0 +1,22 @@
+
+#header {
+  display: flex;
+  align-items: center;
+}
+
+#header > #logo > img {
+  height: 70px;
+}
+
+#header > #name {
+  margin-left: 15px;
+  font-size: 40px;
+}
+
+#header > #spacer {
+  flex-grow: 1;
+}
+
+#header > #color-mode {
+  margin-left: 10px;
+}
