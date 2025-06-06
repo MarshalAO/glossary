@@ -1,0 +1,29 @@
+
+on:
+  push:
+    branches:
+      - devops
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup SSH
+        run: |
+          echo "${{ secrets.ED25519_PRIVATE_KEY_PEM }}" > key.pem
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build the React Website
+        run: npm run build
+      
+      - name: Copy the files to the Web Server
+        run: scp -i key.pem build root@hetzner.marshal.ao:/www/glossary
