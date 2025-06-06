@@ -26,4 +26,9 @@ jobs:
         run: npm run build
       
       - name: Copy the files to the Web Server
-        run: scp -i key.pem build root@hetzner.marshal.ao:/www/glossary
+        run: |
+          scp \
+            -i key.pem \
+            -o StrictHostKeyChecking=no \
+            build \
+            root@hetzner.marshal.ao:/www/glossary
