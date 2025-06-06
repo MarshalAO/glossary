@@ -15,6 +15,7 @@ jobs:
       - name: Setup SSH
         run: |
           echo "${{ secrets.ED25519_PRIVATE_KEY_PEM }}" > key.pem
+          chmod 600 key.pem
       
       - name: Setup Node.js
         uses: actions/setup-node@v4
