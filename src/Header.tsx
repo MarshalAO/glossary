@@ -21,7 +21,7 @@ export default function Header () {
       <div id="logo">
         <img src={logo} alt="Marshal Logo"></img>
       </div>
-      <div id="name">Marshal Glossary</div>
+      <div id="name">Marshal Updated Glossary</div>
       <div id="spacer"/>
       <div id="language">
         <select>
