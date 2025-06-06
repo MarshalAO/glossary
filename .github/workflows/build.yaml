@@ -31,5 +31,6 @@ jobs:
           scp \
             -i key.pem \
             -o StrictHostKeyChecking=no \
+            -r \
             build \
             root@hetzner.marshal.ao:/www/glossary
