@@ -32,5 +32,5 @@ jobs:
             -i key.pem \
             -o StrictHostKeyChecking=no \
             -r \
-            build \
+            build/* \
             root@hetzner.marshal.ao:/www/glossary
