@@ -73,7 +73,7 @@ export default function Header () {
   );
 }
 
-      {/* <div id="color-mode">
+      /* <div id="color-mode">
         <button onClick={toggleColorMode}>{colorMode} Mode</button>
-      </div> */}
+      </div> */
   
