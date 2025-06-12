@@ -1,4 +1,7 @@
 term: AO
-definitions:
-  en_US: A hyper parallel virtual machine
-  th_TH: สวัสดี
+definition: A hyper parallel virtual machine
+translations:
+  th_TH:
+    term: AO
+    pronunciation: เอ โอ
+    definition: เครื่องเสมือนแบบไฮเปอร์ขนาน
