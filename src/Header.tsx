@@ -1,30 +1,12 @@
-import { useEffect, useState } from 'react';
-// import { useState } from 'react';
-// import { useEffect } from 'react';
+import { useEffect, useState } from 'react'
 
 import './Header.css'
 import logo from './logo.png'
 
-
 export default function Header () {
   const [isDark, setIsDark] = useState(false);
 
-  // const [colorMode, setColorMode] = useState('Light');
-
-  // function toggleColorMode () {
-  //   if (colorMode === 'Light') {
-  //     setColorMode('Dark');
-  //   } else {
-  //     setColorMode('Light');
-  //   }
-  // }
-
-  
-//   const toggleTheme = () => {
-//   const body = document.body;
-//   body.classList.toggle('dark-theme');
-// };
-// โหลดธีมจาก localStorage เมื่อ component โหลด
+  // โหลดธีมจาก localStorage เมื่อ component โหลด
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
@@ -49,11 +31,17 @@ export default function Header () {
         <img src={logo} alt="Marshal Logo" />
       </div>
 
-      <div id="name">Marshal Updated Glossary</div>
+      <div id="name">Marshal Glossary</div>
       <div id="spacer" />
 
-      <div className="container">
-        <label className="theme-switch">
+      <div id="language">
+        <select>
+          <option defaultValue="Thai">Thai</option>
+        </select>
+      </div>
+
+      <div id="theme-switcher">
+        <label>
           <input
             type="checkbox"
             checked={isDark}
@@ -62,18 +50,7 @@ export default function Header () {
           <span className="slider" />
         </label>
       </div>
-
-      <div id="language">
-        <select>
-          <option defaultValue="Thai">Thai</option>
-        </select>
-      </div>
       
     </div>
   );
 }
-
-      /* <div id="color-mode">
-        <button onClick={toggleColorMode}>{colorMode} Mode</button>
-      </div> */
-  

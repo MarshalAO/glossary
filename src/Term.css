@@ -4,3 +4,7 @@
   width: 45%;
   padding: 0 12px;
 }
+
+html[data-theme="dark"] .term {
+  border: 1px solid white;
+}
