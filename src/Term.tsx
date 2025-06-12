@@ -2,19 +2,32 @@
 import './Term.css';
 
 interface TermProps {
-  term: string
+  term?: string
+  pronunciation?: string
+  definition?: string
 }
 
 export default function Term (props: TermProps) {
 
-  const { term } = props
+  const { term, pronunciation, definition } = props
 
   return (
-    <div className="term">
-      <h1>{term}</h1>
-      <p>
-        Definition.....
-      </p>
-    </div>
+    !!term ? (
+      <div className="term">
+        <h1>{term}</h1>
+        {!!pronunciation ? (
+          <h3>({pronunciation})</h3>
+        ) : (
+          <h3>&nbsp;</h3>
+        )}
+        <p>
+          {definition}
+        </p>
+      </div>
+    ) : (
+      <div className="term">
+        <p>Missing translation...</p>
+      </div>
+    )
   )
 }
