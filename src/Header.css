@@ -56,13 +56,14 @@
   content:"☀️";
   position: absolute;
   left: 3px;
-  top: 2px;
+  top: 1px;
   font-size: 18px;
-  opacity: 1;
+  opacity: 1px;
   transition: 0.4s;
 }
 
 #theme-switcher input:checked + .slider:after {
   content: "🌑";
-  left: 30px;
+  left: 25px;
+  top: 1px;
 }
