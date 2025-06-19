@@ -39,6 +39,14 @@
   background-color: #3c4c5c;
 }
 
+html[data-theme="dark"] input {
+  box-shadow: 
+    inset 2px 2px 6px #8ca6c1,   /* เงาด้านใน */
+    inset -2px -2px 6px #bdd4f9, /* แสงสะท้อนด้านใน */
+    6px 6px 12px #8ca6c1,        /* เงาด้านนอก */
+    -6px -6px 12px #c2d9f5;
+}
+
 
 
 

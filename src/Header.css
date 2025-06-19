@@ -2,6 +2,7 @@
 #header {
   display: flex;
   align-items: center;
+  font-family: 'Playfair Display', sans-serif;
 }
 
 #header > #logo > img {
@@ -36,17 +37,24 @@
   position: absolute;
 }
 
-#theme-switcher .slider {
+#theme-switcher .slider{
   position: relative;
   display: inline-block;
   width: 55px;
   height: 30px;
-  background-color: #fcfa9c;
-  border-radius: 34px;
-  transition: background-color 0.4s;
-  cursor: pointer;
-  border: 2px solid #888;
-}
+  background: #fff9a4;
+  border-radius: 40px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  width: 50px;
+  box-shadow:
+    3px 3px 5px rgba(100, 120, 150, 0.3),     /* outer เงาล่างขวา */
+    -3px -3px 7px rgba(255, 255, 255, 0.7),   /* outer แสงบนซ้าย */
+    inset 2px 2px 4px rgba(90, 110, 140, 0.2), /* inner เงาด้านในล่างขวา */
+    inset -2px -2px 4px rgba(255, 255, 255, 0.5); /* inner แสงด้านในบนซ้าย */
+  transition: box-shadow 0.3s ease;
+  }
 
 #theme-switcher input:checked + .slider {
   background-color: #377188;
@@ -57,13 +65,25 @@
   position: absolute;
   left: 3px;
   top: 1px;
-  font-size: 18px;
+  font-size: 20px;
   opacity: 1px;
   transition: 0.4s;
 }
 
 #theme-switcher input:checked + .slider:after {
   content: "🌑";
-  left: 25px;
+  left: 20px;
   top: 1px;
 }
+
+/* #theme-switcher .slider {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 30px;
+  background-color: #fcfa9c;
+  border-radius: 34px;
+  transition: background-color 0.4s;
+  cursor: pointer;
+  border: 2px solid #888;
+} */
