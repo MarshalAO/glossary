@@ -1,7 +1,32 @@
-
 #main {
   display: flex;
-  margin: 20px 0;
-  justify-content: space-around;
-  flex-grow: 1;
+  flex-direction: column; /* มือถือ = แนวตั้ง */
+  gap: 16px;
+  padding: 0 16px;
+  box-sizing: border-box;
 }
+
+@media (min-width: 768px) {
+  #main {
+    flex-direction: row; /* คอม = ซ้ายขวา */
+    justify-content: space-around;
+  }
+
+  .term {
+    flex: 1;
+    overflow: auto;
+    max-width: 100%;
+    min-height: 410px;
+    box-sizing: border-box;
+  }
+}
+
+/* ปรับ margin เพื่อไม่ให้ชนขอบมากเกินไป */
+  .term:first-child {
+    margin-right: 8px;
+  }
+
+  .term:last-child {
+    margin-left: 8px;
+  }
+
