@@ -1,4 +1,3 @@
-
 .app {
   margin: 0 auto;
   padding: 10px 0;
@@ -6,4 +5,17 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.main {
+  display: flex;
+  flex-direction: column; /* มือถือ: แนวตั้ง */
+  gap: 16px;
+  padding: 16px;
+}
+
+@media (min-width: 768px) {
+  .main {
+    flex-direction: row; /* คอมพิวเตอร์: แนวนอน */
+  }
 }
