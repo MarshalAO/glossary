@@ -10,23 +10,22 @@
   #main {
     flex-direction: row; /* คอม = ซ้ายขวา */
     justify-content: space-around;
+    align-items: stretch;
+    gap: 16px;
   }
 
   .term {
     flex: 1;
-    overflow: auto;
-    max-width: 100%;
+    overflow: hidden;
     min-height: 410px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
   }
 }
 
-/* ปรับ margin เพื่อไม่ให้ชนขอบมากเกินไป */
-  .term:first-child {
-    margin-right: 8px;
-  }
-
-  .term:last-child {
-    margin-left: 8px;
-  }
+.term:first-child,
+.term:last-child {
+  margin: 0;
+}
 
